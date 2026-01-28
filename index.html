@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Sandeep Reddy Gagalapally | Network & Automation Engineer</title>
   <meta name="description" content="Network Engineer specializing in automation, data-driven networking, cloud infrastructure, and observability." />
 
@@ -20,7 +19,6 @@
       --muted: #9ca3af;
       --accent: #38bdf8;
     }
-
     [data-theme="light"] {
       --bg: #f8fafc;
       --card: #ffffff;
@@ -28,10 +26,8 @@
       --muted: #475569;
       --accent: #0284c7;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
@@ -39,9 +35,7 @@
       line-height: 1.65;
       transition: background 0.3s ease, color 0.3s ease;
     }
-
     a { color: var(--accent); text-decoration: none; }
-
     nav {
       position: fixed;
       top: 0;
@@ -51,7 +45,6 @@
       border-bottom: 1px solid rgba(255,255,255,0.05);
       z-index: 100;
     }
-
     .nav-inner {
       max-width: 960px;
       margin: auto;
@@ -60,13 +53,12 @@
       justify-content: space-between;
       align-items: center;
     }
-
     .nav-links {
       display: flex;
       gap: 1.25rem;
       font-size: 0.9rem;
     }
-
+    .nav-links a.active { border-bottom: 2px solid var(--accent); padding-bottom: 0.1rem; }
     button {
       background: none;
       border: 1px solid rgba(255,255,255,0.15);
@@ -76,115 +68,26 @@
       cursor: pointer;
       font-size: 0.85rem;
     }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 6rem 1.25rem 4rem;
-    }
-
+    .container { max-width: 960px; margin: auto; padding: 6rem 1.25rem 4rem; }
     header { margin-bottom: 3rem; }
-
-    .profile {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .profile img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid rgba(56,189,248,0.4);
-      box-shadow: 0 0 0 6px rgba(56,189,248,0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .profile img:hover {
-      transform: scale(1.05);
-    }
-
-    header h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-
+    .profile { display: flex; align-items: center; gap: 2rem; }
+    .profile img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(56,189,248,0.4); box-shadow: 0 0 0 6px rgba(56,189,248,0.08); transition: transform 0.3s ease; }
+    .profile img:hover { transform: scale(1.05); }
+    header h1 { font-size: 2.6rem; font-weight: 700; margin-bottom: 0.4rem; }
     header p { color: var(--muted); max-width: 720px; }
-
     section { margin-top: 3.5rem; }
-
-    section h2 {
-      font-size: 1.35rem;
-      margin-bottom: 1rem;
-      border-left: 3px solid var(--accent);
-      padding-left: 0.75rem;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 1.5rem;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .project-featured {
-      border: 1px solid rgba(56,189,248,0.4);
-      background: linear-gradient(
-        180deg,
-        rgba(56,189,248,0.08),
-        rgba(56,189,248,0.02)
-      );
-    }
-
+    section h2 { font-size: 1.35rem; margin-bottom: 1rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.25rem; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .project-featured { border: 1px solid rgba(56,189,248,0.4); background: linear-gradient(180deg, rgba(56,189,248,0.08), rgba(56,189,248,0.02)); }
     ul { margin-top: 0.75rem; padding-left: 1.2rem; }
     li { margin-bottom: 0.4rem; }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.8rem;
-    }
-
-    .badge {
-      font-size: 0.75rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      background: rgba(56,189,248,0.15);
-      color: var(--accent);
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 4rem;
-    }
-
-    @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .profile { flex-direction: column-reverse; text-align: center; }
-      header h1 { font-size: 2.1rem; }
-    }
+    .badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
+    .badge { font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 999px; background: rgba(56,189,248,0.15); color: var(--accent); }
+    .fade-in { opacity: 0; transform: translateY(12px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    footer { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
+    @media (max-width: 640px) { .nav-links { display: none; } .profile { flex-direction: column-reverse; text-align: center; } header h1 { font-size: 2.1rem; } }
   </style>
 </head>
 
@@ -193,48 +96,134 @@
     <div class="nav-inner">
       <strong>Sandeep</strong>
       <div class="nav-links">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
       </div>
       <button onclick="toggleTheme()">🌙 / ☀️</button>
     </div>
   </nav>
 
   <div class="container">
-    <header>
+    <!-- Home -->
+    <header id="home">
       <div class="profile">
         <div>
           <h1>Sandeep Reddy Gagalapally</h1>
           <p><strong>Network Engineer</strong> · Automation · Data · Cloud</p>
-          <p>
-            Engineer with 10+ years of experience building, automating, and
-            operating large-scale network infrastructure using data-driven approaches.
-          </p>
-
-          <p style="margin-top: 1.25rem;">
-            <a href="resume.pdf" download>
-              <button>📄 Download Resume</button>
-            </a>
+          <p>Highly motivated network engineer with 10+ years of experience in large-scale networks, automation, data science, and observability.</p>
+          <p style="margin-top: 1rem;">
+            <a href="resume.pdf" download><button>📄 Download Resume</button></a>
           </p>
         </div>
         <img src="profile.jpg" alt="Sandeep Reddy Gagalapally">
       </div>
     </header>
 
+    <!-- About -->
     <section id="about">
       <h2>About</h2>
       <div class="card fade-in">
         <p>
-          I work at the intersection of networking, automation, and data science.
-          I enjoy solving ambiguous problems, reducing operational toil, and building
-          scalable systems that improve reliability and observability.
+          I work at the intersection of networking, automation, and data science. I enjoy solving ambiguous problems, reducing operational toil, and building scalable systems that improve reliability and observability.
         </p>
       </div>
     </section>
 
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card fade-in">
+        <div class="badges">
+          <span class="badge">BGP</span>
+          <span class="badge">OSPF</span>
+          <span class="badge">EVPN/VXLAN</span>
+          <span class="badge">MPLS</span>
+          <span class="badge">Python</span>
+          <span class="badge">Bash</span>
+          <span class="badge">Linux</span>
+          <span class="badge">AWS</span>
+          <span class="badge">Terraform</span>
+          <span class="badge">Flask</span>
+          <span class="badge">Jenkins</span>
+          <span class="badge">Vault</span>
+          <span class="badge">Splunk</span>
+          <span class="badge">Kibana</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="card fade-in">
+        <ul>
+          <li><strong>META (2024 - Present):</strong> Deployed and managed data center network infrastructure; global best practices; 24x7 support.</li>
+          <li><strong>COMCAST (2021 - 2024):</strong> Network automation, DHCP platform, Flask & AWS Lambda apps, Terraform, ML anomaly detection, Node-RED workflows.</li>
+          <li><strong>COMCAST (2018 - 2021):</strong> L2/L3 routing, F5/A10, incident mitigation, dashboarding (Splunk/Kibana/Tableau/Grafana).</li>
+          <li><strong>COMCAST (2016 - 2018):</strong> L2/L3 support, Python & Flask tooling, SevOne dashboards.</li>
+          <li><strong>Softsages Technology (2016):</strong> Cisco deployment, VLAN, HSRP, Nexus upgrades.</li>
+          <li><strong>MobileNet Services (2013 - 2016):</strong> Cisco/Juniper routers and switches, BGP/OSPF, network optimization.</li>
+          <li><strong>Connectivity Wireless (2012 - 2013):</strong> DAS RF intern, iBwave design, in-building coverage.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
     <section id="projects">
       <h2>Projects</h2>
       <div id="projects-grid" class="projects-grid"></div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <div class="card fade-in">
+        <ul>
+          <li>Developed automated network device lifecycle and anomaly detection platforms.</li>
+          <li>Reduced incident response times by 30% via Node-RED & ML workflows.</li>
+          <li>Built observability dashboards and CI/CD pipelines for telecom networks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Credentials -->
+    <section id="credentials">
+      <h2>Credentials</h2>
+      <div class="card fade-in">
+        <ul>
+          <li>Cisco Certified Network Professional (CCNP)</li>
+          <li>Cisco Certified Network Associate (CCNA)</li>
+          <li>Amazon Cloud Certified Practitioner (AWS CCP)</li>
+          <li>Comcast Data Science Academy</li>
+          <li>Advanced Google Analytics</li>
+          <li>Introduction to Gen AI</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card fade-in">
+        <p><strong>Master’s in Electrical and Computer Engineering</strong> | University of North Carolina at Charlotte | Aug 2011 - Aug 2013</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card fade-in">
+        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/sgagalap">github.com/sgagalap</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+      </div>
     </section>
 
     <footer>
@@ -252,49 +241,32 @@
       {
         title: "Automated Network Device Lifecycle Management",
         description: "Automation system to synchronize network device inventory with monitoring platforms.",
-        bullets: [
-          "Integrated discovery with SevOne",
-          "Eliminated manual tracking",
-          "Improved large-scale reliability"
-        ],
-        tech: ["Python", "Automation", "REST APIs"],
+        bullets: ["Integrated discovery with SevOne","Eliminated manual tracking","Improved large-scale reliability"],
+        tech: ["Python","Automation","REST APIs"],
         featured: true
       },
       {
         title: "Auto-Mitigation & Network Anomaly Detection",
         description: "Predictive and automated incident mitigation platform.",
-        bullets: [
-          "Node-RED workflows",
-          "ML-based anomaly detection",
-          "30% faster incident response"
-        ],
-        tech: ["Python", "Machine Learning", "Telemetry"],
+        bullets: ["Node-RED workflows","ML-based anomaly detection","30% faster incident response"],
+        tech: ["Python","Machine Learning","Telemetry"],
         featured: true
       },
       {
         title: "DHCP Management Platform",
         description: "Validated DHCP management using Kea and Flask APIs.",
-        bullets: [
-          "Payload validation",
-          "Subnet and lease automation",
-          "Safer configuration changes"
-        ],
-        tech: ["Flask", "Kea DHCP", "Linux"]
+        bullets: ["Payload validation","Subnet and lease automation","Safer configuration changes"],
+        tech: ["Flask","Kea DHCP","Linux"]
       },
       {
         title: "Telemetry & Observability Platform",
         description: "Automated pipelines for real-time network visibility.",
-        bullets: [
-          "CI/CD pipelines",
-          "Terraform provisioning",
-          "Secrets management"
-        ],
-        tech: ["Terraform", "Jenkins", "Vault"]
+        bullets: ["CI/CD pipelines","Terraform provisioning","Secrets management"],
+        tech: ["Terraform","Jenkins","Vault"]
       }
     ];
 
     const grid = document.getElementById("projects-grid");
-
     projects.forEach(p => {
       const card = document.createElement("div");
       card.className = `card fade-in ${p.featured ? "project-featured" : ""}`;
@@ -310,8 +282,31 @@
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
     });
-
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+    // Smooth scroll & active nav highlighting
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const sections = Array.from(document.querySelectorAll("section, header"));
+
+    function onScroll() {
+      const scrollPos = window.scrollY + 80;
+      sections.forEach(section => {
+        if(scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight){
+          navLinks.forEach(link => link.classList.remove("active"));
+          const activeLink = document.querySelector(`.nav-links a[href="#${section.id}"]`);
+          if(activeLink) activeLink.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", onScroll);
+    navLinks.forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute("href"));
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
   </script>
 </body>
 </html>
