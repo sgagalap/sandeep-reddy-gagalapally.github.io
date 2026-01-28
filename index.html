@@ -8,7 +8,7 @@
 
   <!-- SEO / ATS OPTIMIZATION -->
   <meta name="description" content="Sandeep Reddy Gagalapally is a Network Engineer with 14+ years of experience in large-scale networking, automation, cloud infrastructure, AI/ML-driven observability, Python, Terraform, AWS, and data-driven operations." />
-  <meta name="keywords" content="Network Engineer, Network Automation, Python, AI Networking, Machine Learning, Cloud Networking, Terraform, AWS, BGP, OSPF, MPLS, Data Center Networking" />
+  <meta name="keywords" content="Network Engineer, Network Automation, Python, AI Networking, Machine Learning, Cloud Networking, Terraform, AWS, BGP, OSPF, MPLS, Data Center Networking, Meta Network Engineer" />
   <meta name="author" content="Sandeep Reddy Gagalapally" />
 
   <!-- Fonts -->
@@ -26,7 +26,6 @@
       --text: #e5e7eb;
       --muted: #9ca3af;
       --accent: #22d3ee;
-      --accent-hover: #67e8f9;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -45,8 +44,8 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(10,15,31,0.95);
-      backdrop-filter: blur(8px);
+      background: rgba(10,15,31,0.9);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.05);
       z-index: 100;
     }
@@ -66,25 +65,10 @@
       font-size: 0.85rem;
     }
 
-    .nav-links a:hover { color: var(--accent-hover); }
-
     .container {
       max-width: 1100px;
       margin: auto;
       padding: 6rem 1.25rem 4rem;
-    }
-
-    header {
-      text-align: center;
-    }
-
-    header img.profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 3px solid var(--accent);
     }
 
     header h1 {
@@ -92,7 +76,7 @@
       font-weight: 700;
     }
 
-    header p { color: var(--muted); max-width: 820px; margin: 0.5rem auto; }
+    header p { color: var(--muted); max-width: 820px; }
 
     section { margin-top: 4.5rem; }
 
@@ -108,13 +92,6 @@
       border-radius: 18px;
       padding: 1.8rem;
       border: 1px solid rgba(255,255,255,0.06);
-      margin-bottom: 2rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(34,211,238,0.3);
     }
 
     .fade-in {
@@ -192,7 +169,7 @@
 
     .contact-links a:hover {
       transform: scale(1.15);
-      color: var(--accent-hover);
+      color: #67e8f9;
     }
 
     footer {
@@ -201,12 +178,6 @@
       color: var(--muted);
       font-size: 0.8rem;
     }
-
-    @media (max-width: 768px) {
-      .nav-inner { flex-direction: column; gap: 0.5rem; }
-      .nav-links { flex-wrap: wrap; justify-content: center; }
-      header h1 { font-size: 2.2rem; }
-    }
   </style>
 </head>
 
@@ -214,11 +185,12 @@
 
 <nav>
   <div class="nav-inner">
-    <strong>SRG</strong>
+    <strong>Sandeep Reddy Gagalapally</strong>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#stories">Stories</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -227,7 +199,6 @@
 <div class="container">
 
 <header class="fade-in">
-  <img src="profile.jpg" alt="Sandeep Reddy Gagalapally" class="profile-pic">
   <h1>Sandeep Reddy Gagalapally</h1>
   <p><strong>Network Engineer · Automation · AI/ML · Cloud</strong></p>
   <p>
@@ -284,56 +255,93 @@
   </div>
 </section>
 
-<section id="projects">
-  <h2>AI / ML & Automation Case Studies</h2>
-  <div class="projects-grid">
-
-    <a href="network-anomaly.html" class="card project-featured fade-in">
-      <h3>Network Anomaly Detection & Auto-Mitigation ⭐</h3>
-      <p><strong>Problem:</strong> Manual incident triage caused prolonged MTTR across large-scale network infrastructure.</p>
-      <p><strong>Approach:</strong> Built ML-driven anomaly detection models on interface telemetry and integrated Node-RED workflows for automated mitigation.</p>
-      <div class="badges">
-        <span class="badge">Python</span>
-        <span class="badge">Machine Learning</span>
-        <span class="badge">Telemetry</span>
-        <span class="badge">Node-RED</span>
+    <section id="education">
+      <h2>Education & Coursework</h2>
+      <div class="card fade-in">
+        <h3>Master’s in Electrical & Computer Engineering</h3>
+        <p><strong>University of North Carolina at Charlotte</strong></p>
+        <p class="muted">Aug 2011 – Aug 2013</p>
+        <ul>
+          <li>Embedded Systems</li>
+          <li>Wireless Communication & Networking</li>
+          <li>Research Tools & Techniques in Computer Engineering</li>
+          <li>Digital Signal Processing</li>
+          <li>Real-Time Operating Systems</li>
+          <li>Wireless Sensor Networks</li>
+          <li>Fundamentals of Wireless Systems & Protocols</li>
+          <li>Radio Frequency Design</li>
+          <li>Individual Study & Projects</li>
+          <li>Industrial Internship & Cooperative Education</li>
+        </ul>
       </div>
-    </a>
+    </section>
 
-    <a href="device-lifecycle.html" class="card project-featured fade-in">
-      <h3>Automated Network Device Lifecycle Management ⭐</h3>
-      <p><strong>Problem:</strong> Device inventory drift between production networks and monitoring platforms.</p>
-      <p><strong>Approach:</strong> Developed automation to detect newly added or decommissioned devices and sync them with SevOne using REST APIs.</p>
-      <div class="badges">
-        <span class="badge">Python</span>
-        <span class="badge">REST APIs</span>
-        <span class="badge">Automation</span>
-        <span class="badge">SevOne</span>
+    <section id="projects">
+      <h2>AI / ML & Automation Case Studies</h2>
+      <div class="projects-grid">
+        <div class="card project-featured fade-in">
+          <h3>Network Anomaly Detection & Auto-Mitigation ⭐</h3>
+          <p><strong>Problem:</strong> Manual incident triage caused prolonged MTTR across large-scale network infrastructure.</p>
+          <p><strong>Approach:</strong> Built ML-driven anomaly detection models on interface telemetry and integrated Node-RED workflows for automated mitigation.</p>
+          <p><strong>Impact:</strong> Reduced incident response time by 30% and improved service reliability.</p>
+          <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">Machine Learning</span>
+            <span class="badge">Telemetry</span>
+            <span class="badge">Node-RED</span>
+          </div>
+        </div>
+
+        <div class="card project-featured fade-in">
+          <h3>Automated Network Device Lifecycle Management ⭐</h3>
+          <p><strong>Problem:</strong> Device inventory drift between production networks and monitoring platforms.</p>
+          <p><strong>Approach:</strong> Developed automation to detect newly added or decommissioned devices and sync them with SevOne using REST APIs.</p>
+          <p><strong>Impact:</strong> Eliminated manual tracking and improved observability accuracy across the fleet.</p>
+          <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">REST APIs</span>
+            <span class="badge">Automation</span>
+            <span class="badge">SevOne</span>
+          </div>
+        </div>
+
+        <div class="card fade-in">
+          <h3>DHCP Automation & Validation Platform</h3>
+          <p><strong>Problem:</strong> High risk of configuration errors in DHCP subnet and lease management.</p>
+          <p><strong>Approach:</strong> Implemented Kea DHCP with Flask-based validation APIs and controlled payload customization.</p>
+          <p><strong>Impact:</strong> Enabled safer configuration changes and reduced deployment errors.</p>
+          <div class="badges">
+            <span class="badge">Flask</span>
+            <span class="badge">Kea DHCP</span>
+            <span class="badge">Linux</span>
+          </div>
+        </div>
+
+        <div class="card fade-in">
+          <h3>Telemetry & Observability Automation</h3>
+          <p><strong>Problem:</strong> Limited real-time visibility into network performance and changes.</p>
+          <p><strong>Approach:</strong> Built CI/CD pipelines and Terraform workflows with secure secrets management.</p>
+          <p><strong>Impact:</strong> Improved deployment consistency and real-time service insights.</p>
+          <div class="badges">
+            <span class="badge">Terraform</span>
+            <span class="badge">Jenkins</span>
+            <span class="badge">Vault</span>
+          </div>
+        </div>
       </div>
-    </a>
+    </section>
 
-    <a href="dhcp-automation.html" class="card fade-in">
-      <h3>DHCP Automation & Validation Platform</h3>
-      <p><strong>Problem:</strong> High risk of configuration errors in DHCP subnet and lease management.</p>
-      <p><strong>Approach:</strong> Implemented Kea DHCP with Flask-based validation APIs and controlled payload customization.</p>
-      <div class="badges">
-        <span class="badge">Flask</span>
-        <span class="badge">Kea DHCP</span>
-        <span class="badge">Linux</span>
-      </div>
-    </a>
+<section id="stories">
+  <h2>Meta-Style Behavioral Stories</h2>
+  <div class="card fade-in">
+    <p><strong>Tell me about a time you handled ambiguity:</strong><br/>
+    Led the design of an auto-mitigation system where requirements were unclear.
+    Partnered with stakeholders, iterated quickly, and delivered a scalable
+    solution adopted across teams.</p>
 
-    <a href="telemetry-automation.html" class="card fade-in">
-      <h3>Telemetry & Observability Automation</h3>
-      <p><strong>Problem:</strong> Limited real-time visibility into network performance and changes.</p>
-      <p><strong>Approach:</strong> Built CI/CD pipelines and Terraform workflows with secure secrets management.</p>
-      <div class="badges">
-        <span class="badge">Terraform</span>
-        <span class="badge">Jenkins</span>
-        <span class="badge">Vault</span>
-      </div>
-    </a>
-
+    <p style="margin-top:1rem;"><strong>Tell me about a time you drove impact:</strong><br/>
+    Reduced incident response time by 30% by combining ML anomaly detection
+    with automated remediation workflows.</p>
   </div>
 </section>
 
