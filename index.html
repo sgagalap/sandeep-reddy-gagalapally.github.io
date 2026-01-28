@@ -3,310 +3,373 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sandeep Reddy Gagalapally | Network & Automation Engineer</title>
-  <meta name="description" content="Network Engineer specializing in automation, data-driven networking, cloud infrastructure, and observability." />
+
+  <title>Sandeep Reddy Gagalapally | Network, Automation & AI Engineer</title>
+
+  <!-- SEO / ATS OPTIMIZATION -->
+  <meta name="description" content="Sandeep Reddy Gagalapally is a Network Engineer with 14+ years of experience in large-scale networking, automation, cloud infrastructure, AI/ML-driven observability, Python, Terraform, AWS, and data-driven operations." />
+  <meta name="keywords" content="Network Engineer, Network Automation, Python, AI Networking, Machine Learning, Cloud Networking, Terraform, AWS, BGP, OSPF, MPLS, Data Center Networking, Meta Network Engineer" />
+  <meta name="author" content="Sandeep Reddy Gagalapally" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <style>
     :root {
-      --bg: #020617;
-      --card: #020617;
+      --bg: #0a0f1f;
+      --card: #121a2f;
       --text: #e5e7eb;
       --muted: #9ca3af;
-      --accent: #38bdf8;
+      --accent: #22d3ee;
     }
-    [data-theme="light"] {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #020617;
-      --muted: #475569;
-      --accent: #0284c7;
-    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
-      transition: background 0.3s ease, color 0.3s ease;
     }
+
     a { color: var(--accent); text-decoration: none; }
+
     nav {
       position: fixed;
       top: 0;
       width: 100%;
+      background: rgba(10,15,31,0.9);
       backdrop-filter: blur(10px);
-      background: rgba(2,6,23,0.75);
       border-bottom: 1px solid rgba(255,255,255,0.05);
       z-index: 100;
     }
+
     .nav-inner {
-      max-width: 960px;
+      max-width: 1100px;
       margin: auto;
-      padding: 0.75rem 1.25rem;
+      padding: 0.9rem 1.25rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     .nav-links {
       display: flex;
-      gap: 1.25rem;
-      font-size: 0.9rem;
-    }
-    .nav-links a.active { border-bottom: 2px solid var(--accent); padding-bottom: 0.1rem; }
-    button {
-      background: none;
-      border: 1px solid rgba(255,255,255,0.15);
-      color: var(--text);
-      padding: 0.45rem 0.8rem;
-      border-radius: 8px;
-      cursor: pointer;
+      gap: 1.1rem;
       font-size: 0.85rem;
     }
-    .container { max-width: 960px; margin: auto; padding: 6rem 1.25rem 4rem; }
-    header { margin-bottom: 3rem; }
-    .profile { display: flex; align-items: center; gap: 2rem; }
-    .profile img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(56,189,248,0.4); box-shadow: 0 0 0 6px rgba(56,189,248,0.08); transition: transform 0.3s ease; }
-    .profile img:hover { transform: scale(1.05); }
-    header h1 { font-size: 2.6rem; font-weight: 700; margin-bottom: 0.4rem; }
-    header p { color: var(--muted); max-width: 720px; }
-    section { margin-top: 3.5rem; }
-    section h2 { font-size: 1.35rem; margin-bottom: 1rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; }
-    .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.25rem; }
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
-    .project-featured { border: 1px solid rgba(56,189,248,0.4); background: linear-gradient(180deg, rgba(56,189,248,0.08), rgba(56,189,248,0.02)); }
-    ul { margin-top: 0.75rem; padding-left: 1.2rem; }
-    li { margin-bottom: 0.4rem; }
-    .badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
-    .badge { font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 999px; background: rgba(56,189,248,0.15); color: var(--accent); }
-    .fade-in { opacity: 0; transform: translateY(12px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    footer { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
-    @media (max-width: 640px) { .nav-links { display: none; } .profile { flex-direction: column-reverse; text-align: center; } header h1 { font-size: 2.1rem; } }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 6rem 1.25rem 4rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+    header p { color: var(--muted); max-width: 820px; }
+
+    section { margin-top: 4.5rem; }
+
+    section h2 {
+      font-size: 1.45rem;
+      margin-bottom: 1.2rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 1.8rem;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: all 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .badge {
+      display: inline-block;
+      margin: 0.3rem 0.3rem 0 0;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: rgba(34,211,238,0.15);
+      color: var(--accent);
+    }
+
+    /* TIMELINE */
+    .timeline {
+      position: relative;
+      margin-left: 1rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .timeline-item {
+      margin-left: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .timeline-item h3 { margin-bottom: 0.3rem; }
+    .timeline-item span { color: var(--muted); font-size: 0.85rem; }
+
+    /* CTA */
+    .cta {
+      margin-top: 1.8rem;
+    }
+
+    .cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.7rem 1.2rem;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #020617;
+      font-weight: 600;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(34,211,238,0.4);
+    }
+
+    .contact-links a {
+      margin-right: 1.2rem;
+      font-size: 1.5rem;
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
+
+    .contact-links a:hover {
+      transform: scale(1.15);
+      color: #67e8f9;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
   </style>
 </head>
 
-<body data-theme="dark">
-  <nav>
-    <div class="nav-inner">
-      <strong>Sandeep</strong>
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#credentials">Credentials</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button onclick="toggleTheme()">🌙 / ☀️</button>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <strong>Sandeep Reddy Gagalapally</strong>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#stories">Stories</a>
+      <a href="#contact">Contact</a>
     </div>
-  </nav>
-
-  <div class="container">
-    <!-- Home -->
-    <header id="home">
-      <div class="profile">
-        <div>
-          <h1>Sandeep Reddy Gagalapally</h1>
-          <p><strong>Network Engineer</strong> · Automation · Data · Cloud</p>
-          <p>Highly motivated network engineer with 10+ years of experience in large-scale networks, automation, data science, and observability.</p>
-          <p style="margin-top: 1rem;">
-            <a href="resume.pdf" download><button>📄 Download Resume</button></a>
-          </p>
-        </div>
-        <img src="profile.jpg" alt="Sandeep Reddy Gagalapally">
-      </div>
-    </header>
-
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
-      <div class="card fade-in">
-        <p>
-          I work at the intersection of networking, automation, and data science. I enjoy solving ambiguous problems, reducing operational toil, and building scalable systems that improve reliability and observability.
-        </p>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="card fade-in">
-        <div class="badges">
-          <span class="badge">BGP</span>
-          <span class="badge">OSPF</span>
-          <span class="badge">EVPN/VXLAN</span>
-          <span class="badge">MPLS</span>
-          <span class="badge">Python</span>
-          <span class="badge">Bash</span>
-          <span class="badge">Linux</span>
-          <span class="badge">AWS</span>
-          <span class="badge">Terraform</span>
-          <span class="badge">Flask</span>
-          <span class="badge">Jenkins</span>
-          <span class="badge">Vault</span>
-          <span class="badge">Splunk</span>
-          <span class="badge">Kibana</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="card fade-in">
-        <ul>
-          <li><strong>META (2024 - Present):</strong> Deployed and managed data center network infrastructure; global best practices; 24x7 support.</li>
-          <li><strong>COMCAST (2021 - 2024):</strong> Network automation, DHCP platform, Flask & AWS Lambda apps, Terraform, ML anomaly detection, Node-RED workflows.</li>
-          <li><strong>COMCAST (2018 - 2021):</strong> L2/L3 routing, F5/A10, incident mitigation, dashboarding (Splunk/Kibana/Tableau/Grafana).</li>
-          <li><strong>COMCAST (2016 - 2018):</strong> L2/L3 support, Python & Flask tooling, SevOne dashboards.</li>
-          <li><strong>Softsages Technology (2016):</strong> Cisco deployment, VLAN, HSRP, Nexus upgrades.</li>
-          <li><strong>MobileNet Services (2013 - 2016):</strong> Cisco/Juniper routers and switches, BGP/OSPF, network optimization.</li>
-          <li><strong>Connectivity Wireless (2012 - 2013):</strong> DAS RF intern, iBwave design, in-building coverage.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div id="projects-grid" class="projects-grid"></div>
-    </section>
-
-    <!-- Achievements -->
-    <section id="achievements">
-      <h2>Achievements</h2>
-      <div class="card fade-in">
-        <ul>
-          <li>Developed automated network device lifecycle and anomaly detection platforms.</li>
-          <li>Reduced incident response times by 30% via Node-RED & ML workflows.</li>
-          <li>Built observability dashboards and CI/CD pipelines for telecom networks.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Credentials -->
-    <section id="credentials">
-      <h2>Credentials</h2>
-      <div class="card fade-in">
-        <ul>
-          <li>Cisco Certified Network Professional (CCNP)</li>
-          <li>Cisco Certified Network Associate (CCNA)</li>
-          <li>Amazon Cloud Certified Practitioner (AWS CCP)</li>
-          <li>Comcast Data Science Academy</li>
-          <li>Advanced Google Analytics</li>
-          <li>Introduction to Gen AI</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education">
-      <h2>Education</h2>
-      <div class="card fade-in">
-        <p><strong>Master’s in Electrical and Computer Engineering</strong> | University of North Carolina at Charlotte | Aug 2011 - Aug 2013</p>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card fade-in">
-        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/sgagalap">github.com/sgagalap</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
-      </div>
-    </section>
-
-    <footer>
-      © 2026 Sandeep Reddy Gagalapally
-    </footer>
   </div>
+</nav>
 
-  <script>
-    function toggleTheme() {
-      const theme = document.body.getAttribute("data-theme");
-      document.body.setAttribute("data-theme", theme === "light" ? "dark" : "light");
-    }
+<div class="container">
 
-    const projects = [
-      {
-        title: "Automated Network Device Lifecycle Management",
-        description: "Automation system to synchronize network device inventory with monitoring platforms.",
-        bullets: ["Integrated discovery with SevOne","Eliminated manual tracking","Improved large-scale reliability"],
-        tech: ["Python","Automation","REST APIs"],
-        featured: true
-      },
-      {
-        title: "Auto-Mitigation & Network Anomaly Detection",
-        description: "Predictive and automated incident mitigation platform.",
-        bullets: ["Node-RED workflows","ML-based anomaly detection","30% faster incident response"],
-        tech: ["Python","Machine Learning","Telemetry"],
-        featured: true
-      },
-      {
-        title: "DHCP Management Platform",
-        description: "Validated DHCP management using Kea and Flask APIs.",
-        bullets: ["Payload validation","Subnet and lease automation","Safer configuration changes"],
-        tech: ["Flask","Kea DHCP","Linux"]
-      },
-      {
-        title: "Telemetry & Observability Platform",
-        description: "Automated pipelines for real-time network visibility.",
-        bullets: ["CI/CD pipelines","Terraform provisioning","Secrets management"],
-        tech: ["Terraform","Jenkins","Vault"]
-      }
-    ];
+<header class="fade-in">
+  <h1>Sandeep Reddy Gagalapally</h1>
+  <p><strong>Network Engineer · Automation · AI/ML · Cloud</strong></p>
+  <p>
+    Network Engineer with <strong>14+ years of experience</strong> designing,
+    operating, and automating large-scale networks. Proven impact in
+    AI-driven observability, incident auto-mitigation, cloud-native systems,
+    and data-center networking.
+  </p>
 
-    const grid = document.getElementById("projects-grid");
-    projects.forEach(p => {
-      const card = document.createElement("div");
-      card.className = `card fade-in ${p.featured ? "project-featured" : ""}`;
-      card.innerHTML = `
-        <h3>${p.title}${p.featured ? " ⭐" : ""}</h3>
-        <p>${p.description}</p>
-        <ul>${p.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
-        <div class="badges">${p.tech.map(t => `<span class="badge">${t}</span>`).join("")}</div>
-      `;
-      grid.appendChild(card);
-    });
+  <div class="cta">
+    <a href="resume.pdf" download>
+      <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+    </a>
+  </div>
+</header>
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
-    });
-    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+<section id="about">
+  <h2>About</h2>
+  <div class="card fade-in">
+    I specialize in solving complex infrastructure problems where networking,
+    automation, and data intersect. My work focuses on reducing operational toil,
+    improving reliability at scale, and applying AI/ML to network observability
+    and incident response.
+  </div>
+</section>
 
-    // Smooth scroll & active nav highlighting
-    const navLinks = document.querySelectorAll(".nav-links a");
-    const sections = Array.from(document.querySelectorAll("section, header"));
+<section id="experience">
+  <h2>Experience Timeline</h2>
+  <div class="card fade-in">
+    <div class="timeline">
 
-    function onScroll() {
-      const scrollPos = window.scrollY + 80;
-      sections.forEach(section => {
-        if(scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight){
-          navLinks.forEach(link => link.classList.remove("active"));
-          const activeLink = document.querySelector(`.nav-links a[href="#${section.id}"]`);
-          if(activeLink) activeLink.classList.add("active");
-        }
-      });
-    }
+      <div class="timeline-item">
+        <h3>Network Engineer — Meta</h3>
+        <span>2024 – Present</span>
+        <p>Operating and scaling global data-center networks, defining best
+        practices, and supporting next-generation hardware platforms.</p>
+      </div>
 
-    window.addEventListener("scroll", onScroll);
-    navLinks.forEach(link => {
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute("href"));
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    });
-  </script>
+      <div class="timeline-item">
+        <h3>Network Development Engineer V — Comcast</h3>
+        <span>2021 – 2024</span>
+        <p>Built automation platforms, ML-driven anomaly detection, DHCP
+        management systems, and telemetry pipelines.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Network Engineer IV / III — Comcast</h3>
+        <span>2016 – 2021</span>
+        <p>Led L2/L3 troubleshooting, automation workflows, and large-scale
+        routing environments (BGP, OSPF, MPLS).</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section id="education">
+      <h2>Education & Coursework</h2>
+      <div class="card fade-in">
+        <h3>Master’s in Electrical & Computer Engineering</h3>
+        <p><strong>University of North Carolina at Charlotte</strong></p>
+        <p class="muted">Aug 2011 – Aug 2013</p>
+        <ul>
+          <li>Embedded Systems</li>
+          <li>Wireless Communication & Networking</li>
+          <li>Research Tools & Techniques in Computer Engineering</li>
+          <li>Digital Signal Processing</li>
+          <li>Real-Time Operating Systems</li>
+          <li>Wireless Sensor Networks</li>
+          <li>Fundamentals of Wireless Systems & Protocols</li>
+          <li>Radio Frequency Design</li>
+          <li>Individual Study & Projects</li>
+          <li>Industrial Internship & Cooperative Education</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>AI / ML & Automation Case Studies</h2>
+      <div class="projects-grid">
+        <div class="card project-featured fade-in">
+          <h3>Network Anomaly Detection & Auto-Mitigation ⭐</h3>
+          <p><strong>Problem:</strong> Manual incident triage caused prolonged MTTR across large-scale network infrastructure.</p>
+          <p><strong>Approach:</strong> Built ML-driven anomaly detection models on interface telemetry and integrated Node-RED workflows for automated mitigation.</p>
+          <p><strong>Impact:</strong> Reduced incident response time by 30% and improved service reliability.</p>
+          <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">Machine Learning</span>
+            <span class="badge">Telemetry</span>
+            <span class="badge">Node-RED</span>
+          </div>
+        </div>
+
+        <div class="card project-featured fade-in">
+          <h3>Automated Network Device Lifecycle Management ⭐</h3>
+          <p><strong>Problem:</strong> Device inventory drift between production networks and monitoring platforms.</p>
+          <p><strong>Approach:</strong> Developed automation to detect newly added or decommissioned devices and sync them with SevOne using REST APIs.</p>
+          <p><strong>Impact:</strong> Eliminated manual tracking and improved observability accuracy across the fleet.</p>
+          <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">REST APIs</span>
+            <span class="badge">Automation</span>
+            <span class="badge">SevOne</span>
+          </div>
+        </div>
+
+        <div class="card fade-in">
+          <h3>DHCP Automation & Validation Platform</h3>
+          <p><strong>Problem:</strong> High risk of configuration errors in DHCP subnet and lease management.</p>
+          <p><strong>Approach:</strong> Implemented Kea DHCP with Flask-based validation APIs and controlled payload customization.</p>
+          <p><strong>Impact:</strong> Enabled safer configuration changes and reduced deployment errors.</p>
+          <div class="badges">
+            <span class="badge">Flask</span>
+            <span class="badge">Kea DHCP</span>
+            <span class="badge">Linux</span>
+          </div>
+        </div>
+
+        <div class="card fade-in">
+          <h3>Telemetry & Observability Automation</h3>
+          <p><strong>Problem:</strong> Limited real-time visibility into network performance and changes.</p>
+          <p><strong>Approach:</strong> Built CI/CD pipelines and Terraform workflows with secure secrets management.</p>
+          <p><strong>Impact:</strong> Improved deployment consistency and real-time service insights.</p>
+          <div class="badges">
+            <span class="badge">Terraform</span>
+            <span class="badge">Jenkins</span>
+            <span class="badge">Vault</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id="stories">
+  <h2>Meta-Style Behavioral Stories</h2>
+  <div class="card fade-in">
+    <p><strong>Tell me about a time you handled ambiguity:</strong><br/>
+    Led the design of an auto-mitigation system where requirements were unclear.
+    Partnered with stakeholders, iterated quickly, and delivered a scalable
+    solution adopted across teams.</p>
+
+    <p style="margin-top:1rem;"><strong>Tell me about a time you drove impact:</strong><br/>
+    Reduced incident response time by 30% by combining ML anomaly detection
+    with automated remediation workflows.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let’s Connect</h2>
+  <div class="card fade-in">
+    <div class="contact-links">
+      <a href="mailto:sgagalap@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/sandeep-reddy-gagalapally/" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Sandeep Reddy Gagalapally
+</footer>
+
+</div>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
