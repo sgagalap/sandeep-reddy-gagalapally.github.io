@@ -8,7 +8,7 @@
 
   <!-- SEO / ATS OPTIMIZATION -->
   <meta name="description" content="Sandeep Reddy Gagalapally is a Network Engineer with 14+ years of experience in large-scale networking, automation, cloud infrastructure, AI/ML-driven observability, Python, Terraform, AWS, and data-driven operations." />
-  <meta name="keywords" content="Network Engineer, Network Automation, Python, AI Networking, Machine Learning, Cloud Networking, Terraform, AWS, BGP, OSPF, MPLS, Data Center Networking, Meta Network Engineer" />
+  <meta name="keywords" content="Network Engineer, Network Automation, Python, AI Networking, Machine Learning, Cloud Networking, Terraform, AWS, BGP, OSPF, MPLS, Data Center Networking" />
   <meta name="author" content="Sandeep Reddy Gagalapally" />
 
   <!-- Fonts -->
@@ -59,16 +59,23 @@
       align-items: center;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 1.1rem;
-      font-size: 0.85rem;
-    }
-
     .container {
       max-width: 1100px;
       margin: auto;
       padding: 6rem 1.25rem 4rem;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      margin-bottom: 1.2rem;
     }
 
     header h1 {
@@ -76,7 +83,7 @@
       font-weight: 700;
     }
 
-    header p { color: var(--muted); max-width: 820px; }
+    header p { color: var(--muted); max-width: 820px; margin: auto; }
 
     section { margin-top: 4.5rem; }
 
@@ -100,15 +107,16 @@
       box-shadow: 0 18px 40px rgba(34,211,238,0.25);
     }
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: all 0.7s ease;
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.8rem;
     }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .badge {
@@ -121,21 +129,6 @@
       color: var(--accent);
     }
 
-    /* PROJECT GRID */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.8rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* CTA */
     .cta {
       margin-top: 1.8rem;
     }
@@ -149,23 +142,6 @@
       background: var(--accent);
       color: #020617;
       font-weight: 600;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .cta a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(34,211,238,0.4);
-    }
-
-    .contact-links a {
-      margin-right: 1.2rem;
-      font-size: 1.5rem;
-      transition: transform 0.25s ease, color 0.25s ease;
-    }
-
-    .contact-links a:hover {
-      transform: scale(1.15);
-      color: #67e8f9;
     }
 
     footer {
@@ -182,19 +158,15 @@
 <nav>
   <div class="nav-inner">
     <strong>SRG</strong>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
   </div>
 </nav>
 
 <div class="container">
 
-<header class="fade-in">
+<header>
+  <!-- PROFILE IMAGE -->
+  <img src="profile.jpg" alt="Sandeep Reddy Gagalapally" class="profile-pic">
+
   <h1>Sandeep Reddy Gagalapally</h1>
   <p><strong>Network Engineer · Automation · AI/ML · Cloud</strong></p>
   <p>
@@ -211,66 +183,25 @@
 
 <section id="projects">
   <h2>AI / ML & Automation Case Studies</h2>
-
   <div class="projects-grid">
-
-    <div class="card fade-in">
+    <div class="card">
       <h3>⭐ Network Anomaly Detection & Auto-Mitigation</h3>
-      <p><strong>Problem:</strong> High MTTR due to manual triage.</p>
-      <p><strong>Solution:</strong> ML-based anomaly detection with automated remediation workflows.</p>
-      <p><strong>Impact:</strong> 30% reduction in incident response time.</p>
+      <p>ML-based anomaly detection with automated remediation.</p>
       <div class="badges">
         <span class="badge">Python</span>
-        <span class="badge">Machine Learning</span>
+        <span class="badge">ML</span>
         <span class="badge">Telemetry</span>
-        <span class="badge">Node-RED</span>
       </div>
     </div>
 
-    <div class="card fade-in">
+    <div class="card">
       <h3>⭐ Automated Network Device Lifecycle</h3>
-      <p><strong>Problem:</strong> Monitoring inventory drift.</p>
-      <p><strong>Solution:</strong> Automated sync between production and SevOne.</p>
-      <p><strong>Impact:</strong> Eliminated manual tracking errors.</p>
+      <p>Automated inventory synchronization across monitoring systems.</p>
       <div class="badges">
         <span class="badge">Python</span>
-        <span class="badge">REST APIs</span>
+        <span class="badge">REST</span>
         <span class="badge">Automation</span>
-        <span class="badge">SevOne</span>
       </div>
-    </div>
-
-    <div class="card fade-in">
-      <h3>DHCP Automation Platform</h3>
-      <p>Flask-based validation layer for Kea DHCP.</p>
-      <div class="badges">
-        <span class="badge">Flask</span>
-        <span class="badge">Kea DHCP</span>
-        <span class="badge">Linux</span>
-      </div>
-    </div>
-
-    <div class="card fade-in">
-      <h3>Telemetry & Observability Automation</h3>
-      <p>CI/CD pipelines and Terraform-driven infra automation.</p>
-      <div class="badges">
-        <span class="badge">Terraform</span>
-        <span class="badge">Jenkins</span>
-        <span class="badge">Vault</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Let’s Connect</h2>
-  <div class="card fade-in">
-    <div class="contact-links">
-      <a href="mailto:sgagalap@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/sandeep-reddy-gagalapally/" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
     </div>
   </div>
 </section>
@@ -280,13 +211,6 @@
 </footer>
 
 </div>
-
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
-  });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
