@@ -92,6 +92,12 @@
       border-radius: 18px;
       padding: 1.8rem;
       border: 1px solid rgba(255,255,255,0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(34,211,238,0.25);
     }
 
     .fade-in {
@@ -115,29 +121,19 @@
       color: var(--accent);
     }
 
-    /* TIMELINE */
-    .timeline {
-      position: relative;
-      margin-left: 1rem;
+    /* PROJECT GRID */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.8rem;
+      margin-top: 2rem;
     }
 
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: rgba(255,255,255,0.1);
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
     }
-
-    .timeline-item {
-      margin-left: 2rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .timeline-item h3 { margin-bottom: 0.3rem; }
-    .timeline-item span { color: var(--muted); font-size: 0.85rem; }
 
     /* CTA */
     .cta {
@@ -185,12 +181,12 @@
 
 <nav>
   <div class="nav-inner">
-    <strong>Sandeep Reddy Gagalapally</strong>
+    <strong>SRG</strong>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
       <a href="#projects">Projects</a>
-      <a href="#stories">Stories</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -203,9 +199,7 @@
   <p><strong>Network Engineer · Automation · AI/ML · Cloud</strong></p>
   <p>
     Network Engineer with <strong>14+ years of experience</strong> designing,
-    operating, and automating large-scale networks. Proven impact in
-    AI-driven observability, incident auto-mitigation, cloud-native systems,
-    and data-center networking.
+    operating, and automating large-scale networks with AI-driven observability.
   </p>
 
   <div class="cta">
@@ -215,133 +209,57 @@
   </div>
 </header>
 
-<section id="about">
-  <h2>About</h2>
-  <div class="card fade-in">
-    I specialize in solving complex infrastructure problems where networking,
-    automation, and data intersect. My work focuses on reducing operational toil,
-    improving reliability at scale, and applying AI/ML to network observability
-    and incident response.
-  </div>
-</section>
+<section id="projects">
+  <h2>AI / ML & Automation Case Studies</h2>
 
-<section id="experience">
-  <h2>Experience Timeline</h2>
-  <div class="card fade-in">
-    <div class="timeline">
+  <div class="projects-grid">
 
-      <div class="timeline-item">
-        <h3>Network Engineer — Meta</h3>
-        <span>2024 – Present</span>
-        <p>Operating and scaling global data-center networks, defining best
-        practices, and supporting next-generation hardware platforms.</p>
+    <div class="card fade-in">
+      <h3>⭐ Network Anomaly Detection & Auto-Mitigation</h3>
+      <p><strong>Problem:</strong> High MTTR due to manual triage.</p>
+      <p><strong>Solution:</strong> ML-based anomaly detection with automated remediation workflows.</p>
+      <p><strong>Impact:</strong> 30% reduction in incident response time.</p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">Machine Learning</span>
+        <span class="badge">Telemetry</span>
+        <span class="badge">Node-RED</span>
       </div>
-
-      <div class="timeline-item">
-        <h3>Network Development Engineer V — Comcast</h3>
-        <span>2021 – 2024</span>
-        <p>Built automation platforms, ML-driven anomaly detection, DHCP
-        management systems, and telemetry pipelines.</p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Network Engineer IV / III — Comcast</h3>
-        <span>2016 – 2021</span>
-        <p>Led L2/L3 troubleshooting, automation workflows, and large-scale
-        routing environments (BGP, OSPF, MPLS).</p>
-      </div>
-
     </div>
-  </div>
-</section>
 
-    <section id="education">
-      <h2>Education & Coursework</h2>
-      <div class="card fade-in">
-        <h3>Master’s in Electrical & Computer Engineering</h3>
-        <p><strong>University of North Carolina at Charlotte</strong></p>
-        <p class="muted">Aug 2011 – Aug 2013</p>
-        <ul>
-          <li>Embedded Systems</li>
-          <li>Wireless Communication & Networking</li>
-          <li>Research Tools & Techniques in Computer Engineering</li>
-          <li>Digital Signal Processing</li>
-          <li>Real-Time Operating Systems</li>
-          <li>Wireless Sensor Networks</li>
-          <li>Fundamentals of Wireless Systems & Protocols</li>
-          <li>Radio Frequency Design</li>
-          <li>Individual Study & Projects</li>
-          <li>Industrial Internship & Cooperative Education</li>
-        </ul>
+    <div class="card fade-in">
+      <h3>⭐ Automated Network Device Lifecycle</h3>
+      <p><strong>Problem:</strong> Monitoring inventory drift.</p>
+      <p><strong>Solution:</strong> Automated sync between production and SevOne.</p>
+      <p><strong>Impact:</strong> Eliminated manual tracking errors.</p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">REST APIs</span>
+        <span class="badge">Automation</span>
+        <span class="badge">SevOne</span>
       </div>
-    </section>
+    </div>
 
-    <section id="projects">
-      <h2>AI / ML & Automation Case Studies</h2>
-      <div class="projects-grid">
-        <div class="card project-featured fade-in">
-          <h3>Network Anomaly Detection & Auto-Mitigation ⭐</h3>
-          <p><strong>Problem:</strong> Manual incident triage caused prolonged MTTR across large-scale network infrastructure.</p>
-          <p><strong>Approach:</strong> Built ML-driven anomaly detection models on interface telemetry and integrated Node-RED workflows for automated mitigation.</p>
-          <p><strong>Impact:</strong> Reduced incident response time by 30% and improved service reliability.</p>
-          <div class="badges">
-            <span class="badge">Python</span>
-            <span class="badge">Machine Learning</span>
-            <span class="badge">Telemetry</span>
-            <span class="badge">Node-RED</span>
-          </div>
-        </div>
-
-        <div class="card project-featured fade-in">
-          <h3>Automated Network Device Lifecycle Management ⭐</h3>
-          <p><strong>Problem:</strong> Device inventory drift between production networks and monitoring platforms.</p>
-          <p><strong>Approach:</strong> Developed automation to detect newly added or decommissioned devices and sync them with SevOne using REST APIs.</p>
-          <p><strong>Impact:</strong> Eliminated manual tracking and improved observability accuracy across the fleet.</p>
-          <div class="badges">
-            <span class="badge">Python</span>
-            <span class="badge">REST APIs</span>
-            <span class="badge">Automation</span>
-            <span class="badge">SevOne</span>
-          </div>
-        </div>
-
-        <div class="card fade-in">
-          <h3>DHCP Automation & Validation Platform</h3>
-          <p><strong>Problem:</strong> High risk of configuration errors in DHCP subnet and lease management.</p>
-          <p><strong>Approach:</strong> Implemented Kea DHCP with Flask-based validation APIs and controlled payload customization.</p>
-          <p><strong>Impact:</strong> Enabled safer configuration changes and reduced deployment errors.</p>
-          <div class="badges">
-            <span class="badge">Flask</span>
-            <span class="badge">Kea DHCP</span>
-            <span class="badge">Linux</span>
-          </div>
-        </div>
-
-        <div class="card fade-in">
-          <h3>Telemetry & Observability Automation</h3>
-          <p><strong>Problem:</strong> Limited real-time visibility into network performance and changes.</p>
-          <p><strong>Approach:</strong> Built CI/CD pipelines and Terraform workflows with secure secrets management.</p>
-          <p><strong>Impact:</strong> Improved deployment consistency and real-time service insights.</p>
-          <div class="badges">
-            <span class="badge">Terraform</span>
-            <span class="badge">Jenkins</span>
-            <span class="badge">Vault</span>
-          </div>
-        </div>
+    <div class="card fade-in">
+      <h3>DHCP Automation Platform</h3>
+      <p>Flask-based validation layer for Kea DHCP.</p>
+      <div class="badges">
+        <span class="badge">Flask</span>
+        <span class="badge">Kea DHCP</span>
+        <span class="badge">Linux</span>
       </div>
-    </section>
+    </div>
 
-<section id="stories">
-  <h2>Meta-Style Behavioral Stories</h2>
-  <div class="card fade-in">
-    <p><strong>Tell me about a time you handled ambiguity:</strong><br/>
-    Led the design of an auto-mitigation system where requirements were unclear.
-    Partnered with stakeholders, iterated quickly, and delivered a scalable
-    solution adopted across teams.</p>
+    <div class="card fade-in">
+      <h3>Telemetry & Observability Automation</h3>
+      <p>CI/CD pipelines and Terraform-driven infra automation.</p>
+      <div class="badges">
+        <span class="badge">Terraform</span>
+        <span class="badge">Jenkins</span>
+        <span class="badge">Vault</span>
+      </div>
+    </div>
 
-    <p style="margin-top:1rem;"><strong>Tell me about a time you drove impact:</strong><br/>
-    Reduced incident response time by 30% by combining ML anomaly detection
-    with automated remediation workflows.</p>
   </div>
 </section>
 
@@ -367,7 +285,6 @@
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
   });
-
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
