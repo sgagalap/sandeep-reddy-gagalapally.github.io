@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sandeep Reddy Gagalapally | Network & Automation Engineer</title>
+  <meta name="description" content="Network Engineer specializing in automation, data-driven networking, cloud infrastructure, and observability." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #020617;
+      --muted: #475569;
+      --accent: #0284c7;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      background: rgba(2,6,23,0.75);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    button {
+      background: none;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--text);
+      padding: 0.45rem 0.8rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 6rem 1.25rem 4rem;
+    }
+
+    header { margin-bottom: 3rem; }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(56,189,248,0.4);
+      box-shadow: 0 0 0 6px rgba(56,189,248,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .profile img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    header p { color: var(--muted); max-width: 720px; }
+
+    section { margin-top: 3.5rem; }
+
+    section h2 {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .project-featured {
+      border: 1px solid rgba(56,189,248,0.4);
+      background: linear-gradient(
+        180deg,
+        rgba(56,189,248,0.08),
+        rgba(56,189,248,0.02)
+      );
+    }
+
+    ul { margin-top: 0.75rem; padding-left: 1.2rem; }
+    li { margin-bottom: 0.4rem; }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.8rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(56,189,248,0.15);
+      color: var(--accent);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .profile { flex-direction: column-reverse; text-align: center; }
+      header h1 { font-size: 2.1rem; }
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+  <nav>
+    <div class="nav-inner">
+      <strong>Sandeep</strong>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+      </div>
+      <button onclick="toggleTheme()">🌙 / ☀️</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header>
+      <div class="profile">
+        <div>
+          <h1>Sandeep Reddy Gagalapally</h1>
+          <p><strong>Network Engineer</strong> · Automation · Data · Cloud</p>
+          <p>
+            Engineer with 10+ years of experience building, automating, and
+            operating large-scale network infrastructure using data-driven approaches.
+          </p>
+
+          <p style="margin-top: 1.25rem;">
+            <a href="resume.pdf" download>
+              <button>📄 Download Resume</button>
+            </a>
+          </p>
+        </div>
+        <img src="profile.jpg" alt="Sandeep Reddy Gagalapally">
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="card fade-in">
+        <p>
+          I work at the intersection of networking, automation, and data science.
+          I enjoy solving ambiguous problems, reducing operational toil, and building
+          scalable systems that improve reliability and observability.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div id="projects-grid" class="projects-grid"></div>
+    </section>
+
+    <footer>
+      © 2026 Sandeep Reddy Gagalapally
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const theme = document.body.getAttribute("data-theme");
+      document.body.setAttribute("data-theme", theme === "light" ? "dark" : "light");
+    }
+
+    const projects = [
+      {
+        title: "Automated Network Device Lifecycle Management",
+        description: "Automation system to synchronize network device inventory with monitoring platforms.",
+        bullets: [
+          "Integrated discovery with SevOne",
+          "Eliminated manual tracking",
+          "Improved large-scale reliability"
+        ],
+        tech: ["Python", "Automation", "REST APIs"],
+        featured: true
+      },
+      {
+        title: "Auto-Mitigation & Network Anomaly Detection",
+        description: "Predictive and automated incident mitigation platform.",
+        bullets: [
+          "Node-RED workflows",
+          "ML-based anomaly detection",
+          "30% faster incident response"
+        ],
+        tech: ["Python", "Machine Learning", "Telemetry"],
+        featured: true
+      },
+      {
+        title: "DHCP Management Platform",
+        description: "Validated DHCP management using Kea and Flask APIs.",
+        bullets: [
+          "Payload validation",
+          "Subnet and lease automation",
+          "Safer configuration changes"
+        ],
+        tech: ["Flask", "Kea DHCP", "Linux"]
+      },
+      {
+        title: "Telemetry & Observability Platform",
+        description: "Automated pipelines for real-time network visibility.",
+        bullets: [
+          "CI/CD pipelines",
+          "Terraform provisioning",
+          "Secrets management"
+        ],
+        tech: ["Terraform", "Jenkins", "Vault"]
+      }
+    ];
+
+    const grid = document.getElementById("projects-grid");
+
+    projects.forEach(p => {
+      const card = document.createElement("div");
+      card.className = `card fade-in ${p.featured ? "project-featured" : ""}`;
+      card.innerHTML = `
+        <h3>${p.title}${p.featured ? " ⭐" : ""}</h3>
+        <p>${p.description}</p>
+        <ul>${p.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+        <div class="badges">${p.tech.map(t => `<span class="badge">${t}</span>`).join("")}</div>
+      `;
+      grid.appendChild(card);
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
+    });
+
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
